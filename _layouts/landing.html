@@ -40,9 +40,10 @@
             <div class="inner">
               <header class="major">
                 <h2>{% if site.greeting.title %}{{ site.greeting.title }}{% else %}{{ site.title }}{% endif %}</h2>
-                <p>{% if site.greeting.text %}{{ site.greeting.text | markdownify }}{% else %}{{ site.description | markdownify }}{% endif %}</p>
+                <p>i'm a senior at the university of texas at austin majoring in electrical and computer engineering</br>
+                if i'm not sitting at home watching netflix, then i'm probably out on a hike, reading a book or... laughing at a meme with a friend.</br> i really enjoy photography, reading, listening to obscure (and also mainstream--because if you can't jam out to taylor swift sometimes, are you even human?) music, and spending quality time with friends and family.
               </header>
-              <ul class="icons major">{%
+              <ul class="icons major"> <!-- {%
               for socloc in site.social limit:3 %}{%
                 if socloc[1] %}{%
                   if socloc[0] == 'email' %}
@@ -53,13 +54,18 @@
                        ><span class="label">{{ socloc[0] }}</span></a></li>{%
                   endif %}{%
                 endif %}{%
-              endfor %}
+              endfor %} -->
+              <li><span class="icon fa-diamond major style1"><span class="label">one</span></span></li>
+              <li><span class="icon fa-star-o major style4"><span class="label">two</span></span></li>
+              <li><span class="icon fa-code major style3"><span class="label">three</span></span></li>
+
+
               </ul>
             </div>
           </section>{%
           endif %}
 
-        <!-- Two -->
+        <!-- Two 
           <section id="landing_pages" class="wrapper alt style2">{%
             assign sorted_pages = site.pages | sort:"id" %}{%
             for my_page in sorted_pages %}{%
@@ -83,19 +89,19 @@
             endfor %}
           </section>
 
-        <!-- Three -->{%
+        <!-- Three {%
       if site.tags.featured %}
           <section id="landing_features" class="wrapper style3 special">
             <div class="inner">
               <header class="major">
                 <h2>{{ site.features-title }}</h2>
-                <!-- <p>Blog posts with decent content</p> -->
+                <!-- <p>Blog posts with decent content</p> #there was an end comment here
               </header>
               <ul class="features">{%
                 for my_post in site.posts %}{%
                   if my_post.tags contains 'featured' %}{%
                     assign i = i | plus:1 %}
-                <li class="icon fa-{% if my_post.icon %}{{ my_post.icon }}{% else %}heart-o{% endif %}"><!-- featured:{{ i }} -->
+                <li class="icon fa-{% if my_post.icon %}{{ my_post.icon }}{% else %}heart-o{% endif %}"><!-- featured:{{ i }} #end comment arrow
                   <a href="{{ my_post.url | prepend:site.baseurl }}">
                   <div class="container">
                   <h3>{{ my_post.title }}</h3>
@@ -113,7 +119,7 @@
           </section>{%
       endif %}
 
-        <!-- CTA -->
+        <!-- CTA 
           <section id="cta" class="wrapper style4">
             <div class="inner">
               <header>
@@ -121,11 +127,13 @@
                 <p>{{ site.closing-para }}</p>
               </header>
               <ul class="actions vertical">
-                <!-- <li><a href="#" class="button fit special">Activate</a></li> -->
+                <!-- <li><a href="#" class="button fit special">Activate</a></li> 
                 <li><a href="{{ '/contact/' | prepend: site.baseurl }}" class="button fit special">Contact</a></li>
               </ul>
             </div>
-          </section>
+          </section> 
+
+          -->
 
       {% include footer.html %}
 
